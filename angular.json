@@ -45,10 +45,16 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./assets"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           },
@@ -122,5 +128,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f9dd5219-eeeb-4fe5-ac38-efd66af38570"
   }
 }
