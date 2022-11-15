@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import { MarkerService } from '../marker.service';
 import { PolygonService } from '../polygon.service';
+import { PolylineService } from '../polyline.service';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -30,7 +31,8 @@ export class MapComponent implements AfterViewInit {
 
   constructor(
     private markerService: MarkerService,
-    private polygonService: PolygonService
+    private polygonService: PolygonService,
+    private polylineService: PolylineService
   ) { }
   
 
@@ -55,5 +57,6 @@ export class MapComponent implements AfterViewInit {
     this.initMap();
     this.polygonService.makePolygon(this.map);
     this.markerService.makeCapitalMarkers(this.map);
+    this.polylineService.makePolyline(this.map);
   }
 }
