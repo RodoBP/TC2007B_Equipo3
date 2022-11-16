@@ -13,7 +13,7 @@ export class PolylineService {
   makePolyline(map:any): void{
     this.http.get(this.path).subscribe((res: any) => {
       const coordinates: any = [];
-      for (const c of res.features[0].geometry.coordinates[0]){
+      for (const c of res.features[0].geometry.coordinates){
         coordinates.push([c[1], c[0]]);
       }
       
