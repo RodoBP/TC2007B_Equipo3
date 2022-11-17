@@ -1,0 +1,82 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            -110.91209942941005,
+            29.171134011489812
+          ],
+          [
+            -110.91072372981728,
+            29.17115176345642
+          ],
+          [
+            -110.91174703345517,
+            29.169625083092072
+          ],
+          [
+            -110.91158438916806,
+            29.16905701018304
+          ],
+          [
+            -110.90986984731153,
+            29.169092514831547
+          ],
+          [
+            -110.90986307046596,
+            29.167246256804546
+          ]
+        ],
+        "type": "LineString"
+      }
+    }
+  ],
+  "points":[
+    {
+      "type": "Feature",
+      "properties": {
+        "user": "Jorges",
+        "content": "Aqui va un texto.",
+        "img":"https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"},
+      "geometry": {
+        "coordinates": [
+          -110.90986983092247,
+          29.16909277242293
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "user": "Silvana",
+        "content": "Aqui va un texto.",
+        "img":"https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"},
+      "geometry": {
+        "coordinates": [
+          -110.91072435259856,
+          29.17115176345665
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "user": "Rodo",
+        "content": "Aqui va un texto.",
+        "img":"https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"},
+      "geometry": {
+        "coordinates": [
+          -110.91157727967114,
+          29.16906525005183
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

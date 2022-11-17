@@ -13,4 +13,10 @@ export class PopUpService {
       `<div>Population: ${ data.population }</div>` +
       `<img src="https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg" height="150px" width="150px"/>`;
   }
+  makePopup(data: any): string {
+    return `` +
+      `<div> ${ data.content }</div>` +
+      `<div>By: ${ data.user }</div>` +
+      `<div><img src=${ data.img } height="150px" width="150px"/></div>`;
+  }
 }
