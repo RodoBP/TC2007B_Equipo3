@@ -58,5 +58,7 @@ export class MapComponent implements AfterViewInit {
     this.polygonService.makePolygon(this.map);
     this.markerService.makeCapitalMarkers(this.map);
     this.polylineService.makePolyline(this.map);
+    this.polylineService.makeStartIcon(this.map);
+    this.polylineService.makeFinishIcon(this.map);
   }
 }
