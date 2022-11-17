@@ -8,6 +8,7 @@ import { PopUpService } from './popup.service';
 })
 export class MarkerService {
   capitals: string = '/assets/data/usa-capitals.geojson';
+  markers: string = '/assets/data/tec-paths.geojson';
   constructor(
     private http: HttpClient,
     private PopUpService: PopUpService
@@ -23,6 +24,18 @@ export class MarkerService {
 
         marker.bindPopup(this.PopUpService.makeCapitalPopup(c.properties));
 
+        marker.addTo(map);
+      }
+    });
+  }
+  makeMarkers(map:any): void {
+    this.http.get(this.markers).subscribe((res: any) => {
+      for (const c of res.points) {
+        const lon = c.geometry.coordinates[0];
+        const lat = c.geometry.coordinates[1];
+        const marker = L.marker([lat, lon]);
+
+        marker.bindPopup(this.PopUpService.makePopup(c.properties));
         marker.addTo(map);
       }
     });

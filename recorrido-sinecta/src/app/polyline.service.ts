@@ -7,7 +7,7 @@ import * as L from 'leaflet';
   providedIn: 'root'
 })
 export class PolylineService {
-  path: string = '/assets/data/tec-paths.json';
+  path: string = '/assets/data/tec-paths.geojson';
   
   constructor(private http: HttpClient) { }
 
@@ -18,8 +18,6 @@ export class PolylineService {
         coordinates.push([c[1], c[0]]);
       }
       
-      console.log(coordinates);
-
       var polyline = L.polyline(coordinates, {color: 'black'});
       polyline.addTo(map);
 
@@ -29,9 +27,6 @@ export class PolylineService {
   makeStartIcon(map:any): void{
     
     this.http.get(this.path).subscribe((res: any) => {
-
-      console.log( "lt " + (res.features[0].geometry.coordinates.at(0)).at(1));
-      console.log(( "long " + res.features[0].geometry.coordinates.at(0)).at(0));
       
       const svgIcon = L.divIcon({
         html: `
@@ -53,9 +48,6 @@ export class PolylineService {
   makeFinishIcon(map:any): void{
     
     this.http.get(this.path).subscribe((res: any) => {
-
-      console.log( "lt " + (res.features[0].geometry.coordinates.at(-1)).at(1));
-      console.log(( "long " + res.features[0].geometry.coordinates.at(-1)).at(0));
    
       
       const svgIcon = L.divIcon({
