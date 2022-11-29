@@ -14,7 +14,6 @@ export class MarkerService {
     private PopUpService: PopUpService
   ) { }
 
-  
   makeMarkers(map:any, path:number): void {
     axios.get(this.markers).then((res: any) => {
       for (const c of res.data.paths[path].points) {
@@ -22,7 +21,10 @@ export class MarkerService {
         const lat = c.geometry.coordinates[1];
         const marker = L.marker([lat, lon]);
 
-        marker.bindPopup(this.PopUpService.makePopup(c.properties));
+        marker.bindPopup(this.PopUpService.makePopup(c.properties), {
+          closeButton: false,
+          minWidth: 320
+          });
         marker.addTo(map);
       }
     });

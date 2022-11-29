@@ -8,11 +8,13 @@ import { PolylineService } from './polyline.service';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
+import { ValidationComponent } from './validation/validation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    ValidationComponent
   ],
   imports: [
     BrowserModule,
