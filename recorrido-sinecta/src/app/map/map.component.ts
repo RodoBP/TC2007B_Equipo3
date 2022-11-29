@@ -56,9 +56,8 @@ export class MapComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.initMap();
     this.polygonService.makePolygon(this.map);
-    this.polylineService.makePolyline(this.map);
-    this.polylineService.makeStartIcon(this.map);
-    this.polylineService.makeFinishIcon(this.map);
-    this.markerService.makeMarkers(this.map);
+    this.polylineService.makePolyline(this.map, 0);
+
+    this.markerService.makeMarkers(this.map, 0);
   }
 }

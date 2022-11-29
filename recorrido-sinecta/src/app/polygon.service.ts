@@ -1,25 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
+import axios from 'axios';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PolygonService {
-  polygon: string = '/assets/data/tec-terrain.json';
+  polygon: string = '/assets/data/tec-predio.json';
 
   constructor(
     private http: HttpClient,
   ) { }
 
   makePolygon(map: any): void{
-    this.http.get(this.polygon).subscribe((res: any) => {
+    axios.get(this.polygon).then((res: any) => {
+      console.log(res);
       const coordinates: any = [];
-      for (const c of res.features[0].geometry.coordinates[0]){
+      for (const c of res.data.features[0].geometry.coordinates[0]){
         coordinates.push([c[1], c[0]]);
       }
       
-      console.log(coordinates);
       const area = L.polygon(
         coordinates, 
         {color: 'red', fillColor: 'red', fillOpacity: 0.1}
