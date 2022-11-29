@@ -1,0 +1,47 @@
+.validation-frame {
+    border: 2px solid rgb(151, 151, 151);
+    background-color: lightgray;
+    width: auto;
+    height: 210px;
+    padding: 20px;
+  } 
+
+.select-path{
+  display: flex;
+  width: 100%;
+  padding: 5px;
+}
+
+.first{
+  width: 35%;
+  border: 1px solid black;
+  overflow: hidden;
+  float: left;
+  padding: 10px;
+  height: 190px;
+}
+
+.second{
+  width: 97%;
+  border: 1px solid black;
+  height: 190px;
+  padding: 10px;
+}
+
+.text-area{
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.btn-area{
+  display: flex;
+  justify-content: right;
+  margin-right: 45px;
+  align-items: center;
+  
+}
+
+.btn-primary{
+  padding: 5px;
+}

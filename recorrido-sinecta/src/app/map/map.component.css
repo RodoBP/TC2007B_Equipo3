@@ -1,14 +1,10 @@
 .map-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 30px;
+    position: relative;
+    height: 650px;
   }
   
   .map-frame {
-    border: 2px solid black;
+    border: 2px solid rgb(151, 151, 151);
     height: 100%;
   }
   
