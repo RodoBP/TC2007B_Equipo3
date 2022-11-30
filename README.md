@@ -25,10 +25,15 @@ npm install
 ```
 
 ## Como correr el proyecto
+Se instala primero la terminal de angular
+```sh
+npm install -g @angular/cli
+```
+
 Dentro del folder del proyecto introducir los siguientes comandos en la terminal:
 ```sh
-npm build
-npm serve
+ng build
+ng serve
 ```
 
 ## Tecnologías y librerías usadas
