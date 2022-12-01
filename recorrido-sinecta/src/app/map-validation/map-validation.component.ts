@@ -20,9 +20,9 @@ const iconDefault = L.icon({
 L.Marker.prototype.options.icon = iconDefault;
 
 @Component({
-  selector: 'app-map',
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  selector: 'app-map-validation',
+  templateUrl: './map-validation.component.html',
+  styleUrls: ['./map-validation.component.css']
 })
 export class MapComponent implements AfterViewInit {
   private map:any;
@@ -48,7 +48,6 @@ export class MapComponent implements AfterViewInit {
       minZoom: 3,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-
     
     tiles.addTo(this.map);
   }
@@ -59,5 +58,10 @@ export class MapComponent implements AfterViewInit {
     this.polylineService.makePolyline(this.map, 0);
 
     this.markerService.makeMarkers(this.map, 0);
+  }
+
+  reloadmap(i:any) {
+    this.polylineService.updatePolyline(this.map, i);
+    this.markerService.makeMarkers(this.map, i);
   }
 }

@@ -7,8 +7,8 @@ import { PopUpService } from './popup.service';
 import { PolylineService } from './polyline.service';
 
 import { AppComponent } from './app.component';
-import { MapComponent } from './map/map.component';
-import { ValidationComponent } from './validation/validation.component';
+import { ValidationComponent } from './map-validation/validation/validation.component';
+import { MapComponent } from './map-validation/map-validation.component';
 
 @NgModule({
   declarations: [

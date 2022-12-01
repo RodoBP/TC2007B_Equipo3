@@ -1,0 +1,45 @@
+<div class="validation-frame">
+    <div class="first">
+        <div>
+            <select class="select-path" name="path" id="path" (change)="newPath($event)">
+                <option *ngFor="let path of data.paths; index as i;" value='{{i}}'>Ruta {{i+1}}</option>
+            </select>
+        </div>
+        <div>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flag-3" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="#00b341" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 14h14l-4.5 -4.5l4.5 -4.5h-14v16" />
+                </svg>
+              Inicio</p>
+            <p>.</p>
+            <p>. Numero de Marcadores {{currPath.points.length}}</p>
+            <p>.</p>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-flag-3" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="#ff4500" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 14h14l-4.5 -4.5l4.5 -4.5h-14v16" />
+                </svg> 
+              Final</p>
+        </div>
+    </div>
+    <div class="second" *ngIf="validado; else elseBlock">
+        <div class="text-area">
+            <textarea id="freeform" name="freeform" rows="10" cols="110" placeholder="Agregar comentario" #titleinput></textarea>
+        </div>
+        <div class="btn-area">
+            <button style="background-color: green;"class="btn-primary" (click)="changeJson(titleinput.value,1)">Valido</button>
+            <button style="background-color: red;"class="btn-primary" (click)="changeJson(titleinput.value,2)">No Valido</button>
+        </div>
+    </div>
+    <ng-template #elseBlock>
+        <div class="second">
+            <div>
+                <p *ngIf="valido; else elseBlock">El recorrido es valido</p>
+                <ng-template #elseBlock><p>El recorrido no es valido</p></ng-template>
+            </div>
+            <div>
+                <p>Comentario: {{currPath.features[0].properties.comment}}</p>
+            </div>
+        </div>
+  </ng-template>
+</div>
