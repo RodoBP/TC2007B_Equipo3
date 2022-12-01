@@ -4,14 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkerService } from './marker.service';
 import { PopUpService } from './popup.service';
+import { PolylineService } from './polyline.service';
 
 import { AppComponent } from './app.component';
-import { MapComponent } from './map/map.component';
+import { ValidationComponent } from './map-validation/validation/validation.component';
+import { MapComponent } from './map-validation/map-validation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    ValidationComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import { MapComponent } from './map/map.component';
   ],
   providers: [
     MarkerService,
-    PopUpService
+    PopUpService,
+    PolylineService
   ],
   bootstrap: [AppComponent]
 })

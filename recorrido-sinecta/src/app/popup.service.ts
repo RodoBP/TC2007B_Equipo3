@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { popup } from 'leaflet';
 
 @Injectable({
   providedIn: 'root'
@@ -6,11 +7,30 @@ import { Injectable } from '@angular/core';
 export class PopUpService {
   constructor() { }
 
-  makeCapitalPopup(data: any): string {
-    return `` +
-      `<div>Capital: ${ data.name }</div>` +
-      `<div>State: ${ data.state }</div>` +
-      `<div>Population: ${ data.population }</div>` +
-      `<img src="https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg" height="150px" width="150px"/>`;
+  makePopup(data: any): string {
+    
+    var pop = ''
+      +`<style>`
+      + `.text {`
+      + `float: left;`
+      + `width: 60%;`
+      + `height: 100%;`
+      + `}`
+      + `.image {`
+      + `width: 100%;`
+      + `}`
+      + `.popup{`
+      + `width: 100%;`
+      + `height: 150px;`
+      + `}`
+      + `</style>`
+      + `<div class="popup">` 
+      +`<div class='text'> <p>${ data.content }</p><p>By: ${ data.user }</p></div>`
+      
+      if(data.img != ""){
+        pop = pop +`<div class='image' ><img src=${ data.img } height="150px" width="150px"/></div>`;
+      }
+      pop = pop +`</div>`;
+      return pop;
   }
 }
