@@ -10,12 +10,10 @@ export class PolygonService {
   polygon: string = '/assets/data/tec-predio.json';
 
   constructor(
-    private http: HttpClient,
   ) { }
 
   makePolygon(map: any): void{
     axios.get(this.polygon).then((res: any) => {
-      console.log(res);
       const coordinates: any = [];
       for (const c of res.data.features[0].geometry.coordinates[0]){
         coordinates.push([c[1], c[0]]);

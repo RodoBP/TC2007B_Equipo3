@@ -4,6 +4,8 @@ import * as L from 'leaflet';
 import { PopUpService } from './popup.service';
 import axios from 'axios';
 
+var markersLayer = new L.LayerGroup();
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +17,7 @@ export class MarkerService {
   ) { }
 
   makeMarkers(map:any, path:number): void {
+    markersLayer.clearLayers();
     axios.get(this.markers).then((res: any) => {
       for (const c of res.data.paths[path].points) {
         const lon = c.geometry.coordinates[0];
@@ -23,9 +26,10 @@ export class MarkerService {
 
         marker.bindPopup(this.PopUpService.makePopup(c.properties), {
           closeButton: false,
-          minWidth: 320
+          minWidth: 400
           });
-        marker.addTo(map);
+          markersLayer.addLayer(marker);
+          markersLayer.addTo(map);
       }
     });
   }

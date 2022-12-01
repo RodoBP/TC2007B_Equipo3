@@ -27,8 +27,9 @@
         {
           "type": "Feature",
           "properties": {
-            "accepted": false,
-            "comment": ""
+            "accepted": 0,
+            "comment": "",
+            "id": 1
           },
           "geometry": {
             "coordinates": [
@@ -48,8 +49,8 @@
           "type": "Feature",
           "properties": {
             "user": "Jorges",
-            "content": "Aqui va un texto.",
-            "img": "https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"
+            "content": "Se encontro un obstaculo en el camino. Esto impide el paso de los vehiculos.",
+            "img": "https://images.radio.com/aiu-media/hoyo-dda18639-7bad-4deb-ad50-4eae43b9df87.jpg"
           },
           "geometry": {
             "coordinates": [-110.90986983092247, 29.16909277242293],
@@ -60,8 +61,8 @@
           "type": "Feature",
           "properties": {
             "user": "Silvana",
-            "content": "Aqui va un texto.",
-            "img": "https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"
+            "content": "Parece que un arbol se cayo en el camino. Necesitaremos equipo para poder removerlo.",
+            "img": "https://images.unsplash.com/photo-1620239864516-c7513ed7eab2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFsbGVuJTIwdHJlZXxlbnwwfHwwfHw%3D&w=1000&q=80"
           },
           "geometry": {
             "coordinates": [-110.91072435259856, 29.17115176345665],
@@ -72,8 +73,8 @@
           "type": "Feature",
           "properties": {
             "user": "Rodo",
-            "content": "Aqui va un texto.",
-            "img": "https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"
+            "content": "Tengan cuidado. Parece ser que un animal se cruzo en el camino.",
+            "img": "https://cdn.britannica.com/32/75632-050-7847C491/variant-coyote.jpg"
           },
           "geometry": {
             "coordinates": [-110.91157727967114, 29.16906525005183],
@@ -88,16 +89,19 @@
         {
           "type": "Feature",
           "properties": {
-            "accepted": false,
-            "comment": ""
+            "accepted": 0,
+            "comment": "",
+            "id": 2
           },
           "geometry": {
             "coordinates": [
+              [-110.91209942941005, 29.171134011489812],
               [-110.912464126441, 29.17031546894991],
               [-110.91122101124488, 29.16861892621671],
               [-110.91109209559494, 29.16930237097472],
               [-110.9096556069236, 29.169197844423863],
-              [-110.90980293909482, 29.168136491883487]
+              [-110.90980293909482, 29.168136491883487],
+              [-110.90986307046596, 29.167246256804546]
             ],
             "type": "LineString"
           }
@@ -108,8 +112,8 @@
           "type": "Feature",
           "properties": {
             "user": "Jorges",
-            "content": "Aqui va un texto 2.",
-            "img": "https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"
+            "content": "Probando notas en mapa.",
+            "img": ""
           },
           "geometry": {
             "coordinates": [-110.91179192340906, 29.16936669495334],
@@ -120,23 +124,11 @@
           "type": "Feature",
           "properties": {
             "user": "Silvana",
-            "content": "Aqui va un texto 2.",
-            "img": "https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"
+            "content": "Parece que un arbol se cayo en el camino. Necesitaremos equipo para poder removerlo.",
+            "img": "https://images.unsplash.com/photo-1620239864516-c7513ed7eab2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFsbGVuJTIwdHJlZXxlbnwwfHwwfHw%3D&w=1000&q=80"
           },
           "geometry": {
             "coordinates": [-110.91110130385529, 29.16931041147437],
-            "type": "Point"
-          }
-        },
-        {
-          "type": "Feature",
-          "properties": {
-            "user": "Rodo",
-            "content": "Aqui va un texto 2.",
-            "img": "https://static.pexels.com/photos/189349/pexels-photo-189349.jpeg"
-          },
-          "geometry": {
-            "coordinates": [-110.9096556069236, 29.169197844423863],
             "type": "Point"
           }
         }
