@@ -4,7 +4,7 @@
 - Luis Rodolfo Bojorquez Pineda A01250513
 - Silvana Dorita Ruiz Olivarría A01252346
 - Jorge Esteban Cardenas Esquer A00232305
-- Jorge Leopoldo
+- Jorge Leopoldo Jiménez Velásquez A01253696 
 
 ### Socio Formador: Sinecta
 
